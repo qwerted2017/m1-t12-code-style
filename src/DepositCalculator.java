@@ -31,10 +31,11 @@ public class DepositCalculator {
         System.out.println("Введите срок вклада в годах:");
         period = scanner.nextInt();
         System.out.println("Выберите тип вклада, 1 - вклад с обычным процентом, 2 - вклад с капитализацией:");
+        /* Я бы разбил на 3 строки, ибо в одну строку не очень информативно выглядит*/
         action = scanner.nextInt();
 
         if (action == 1) {
-            resultOut = calculateSimplePercent(amount, 0.06, period);
+            resultOut = calculateSimplePercent(amount, 0.06, period);// Целесообразно 0,06 вынести в переменную и назвать ее так чтобы было понятно, что это годовая процентная ставка
         } else if (action == 2) {
             resultOut = calculateComplexPercent(amount, 0.06, period);
         }
